@@ -1,0 +1,55 @@
+<CatalogoScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30
+        spacing: 20
+
+        BoxLayout:
+            size_hint_y: None
+            height: 60
+            padding: 10
+            canvas.before:
+                Color:
+                    rgba: 0.85, 0.9, 1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: '[b]Catálogo de Comida[/b]'
+                font_size: '28sp'
+                markup: True
+                color: 0, 0, 0, 1
+
+        # Productos
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 10
+
+            Label:
+                text: 'Pizza - $8'
+                font_size: '20sp'
+                color: 0, 0, 0, 1
+
+            Label:
+                text: 'Hamburguesa - $7'
+                font_size: '20sp'
+                color: 0, 0, 0, 1
+
+            Label:
+                text: 'Tacos - $6'
+                font_size: '20sp'
+                color: 0, 0, 0, 1
+
+            Label:
+                text: 'Ensalada - $5'
+                font_size: '20sp'
+                color: 0, 0, 0, 1
+
+        Button:
+            text: 'Volver al inicio'
+            font_size: '18sp'
+            size_hint_y: 0.15
+            background_normal: ''
+            background_color: 0.8, 0.85, 1, 1
+            color: 0, 0, 0, 1
+            on_press: root.volver_login()
