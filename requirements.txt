@@ -1,5 +1,8 @@
 Flask==2.3.3
 Flask-MySQLdb==1.0.1
 Flask-Cors==4.0.1
+<<<<<<< HEAD
 requests==2.31.0
+=======
+>>>>>>> a957099d2a0cd302a4bd626cf706ecaaac1c13b9
 gunicorn==21.2.0
