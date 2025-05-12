@@ -1,0 +1,33 @@
+<CatalogoScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: 'Catálogo de Productos'
+            font_size: 24
+            size_hint_y: None
+            height: 50
+            bold: True
+
+        ScrollView:
+            size_hint_y: 0.8
+            GridLayout:
+                id: productos_container
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 80
+                spacing: 10
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'bottom'
+            size_hint_y: 0.15
+            Button:
+                text: 'Volver al Login'
+                size_hint: None, None
+                size: 200, 50
+                background_color: 0.2, 0.6, 1, 1
+                on_press: root.volver_login()

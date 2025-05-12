@@ -1,0 +1,65 @@
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        Label:
+            id: info
+            text: 'Regístrate o inicia sesión'
+            font_size: 20
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: usuario
+            hint_text: "Usuario"
+            multiline: False
+            font_size: 18
+            padding: [10, (self.height - self.line_height)/2]
+
+        TextInput:
+            id: email
+            hint_text: "Correo electrónico"
+            multiline: False
+            font_size: 18
+            padding: [10, (self.height - self.line_height)/2]
+
+        TextInput:
+            id: clave
+            hint_text: 'Contraseña'
+            password: True
+            multiline: False
+            font_size: 18
+            padding: [10, (self.height - self.line_height)/2]
+
+        AnchorLayout:
+            anchor_x: 'center'
+            size_hint_y: None
+            height: 50
+            Button:
+                id: boton_registrar
+                text: 'Registrar'
+                size_hint: None, None
+                size: 150, 40
+                font_size: 16
+                on_press: root.registrar(self)
+
+        AnchorLayout:
+            anchor_x: 'center'
+            size_hint_y: None
+            height: 50
+            Button:
+                id: boton_login
+                text: 'Iniciar Sesión'
+                size_hint: None, None
+                size: 150, 40
+                font_size: 16
+                on_press: root.iniciar_sesion(self)
+
+        Label:
+            id: mensaje
+            text: ''
+            color: 1, 0, 0, 1
+            size_hint_y: None
+            height: 30
